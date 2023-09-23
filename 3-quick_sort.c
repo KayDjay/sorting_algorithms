@@ -5,6 +5,7 @@
  * swap - it swaps two elements of an array
  *
  * @array: a pointer to an array
+ * @size: size of array
  * @i: index of element to be swapped
  * @j: inex of element to be swapped
  */
@@ -25,8 +26,11 @@ void swap(int *array, size_t size, int i, int j)
  * lomuto - lomuto partition scheme used in the Quick Sort.
  *
  * @array: input array to be partitioned.
+ * @size: array size
  * @low: the index of the first element in the range to be partitioned.
  * @high: the index of the last element in the range to be partitioned.
+ *
+ * Return: final position of the pivot element
  */
 int lomuto(int *array, size_t size, int low, int high)
 {
@@ -46,15 +50,14 @@ int lomuto(int *array, size_t size, int low, int high)
 	return (index + 1);
 }
 
-/*
- * quicksort - quick_sort helper
+/**
+ * quicksort - quick_sort helper.
  *
  * @array: array pointer.
  * @size: array size.
- * @low: index of first element in the sub-array.
- * @high: index of last element in the sub-array.
+ * @low: index of first element in the subarray.
+ * @high: index of last element in the subarray.
  */
-
 void quicksort(int *array, size_t size, int low, int high)
 {
 	int index;
@@ -69,7 +72,7 @@ void quicksort(int *array, size_t size, int low, int high)
 
 /**
  * quick_sort - it sorts an array of integers in
- * ascending order using the Quick sort algorithm
+ * ascending order using the Quick sort algorithm.
  *
  * @array: array of n elements
  * @size: number of elements
