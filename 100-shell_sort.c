@@ -7,7 +7,7 @@
  * @array: The array to be sorted
  * @size: Number of elements in the array
  */
-i
+
 void shell_sort(int *array, size_t size)
 {
 	int gap = 1, a;
